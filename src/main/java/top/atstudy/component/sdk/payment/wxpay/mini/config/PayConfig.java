@@ -1,4 +1,4 @@
-package top.atstudy.component.sdk.payment.wx.mini.config;
+package top.atstudy.component.sdk.payment.wxpay.mini.config;
 
 public class PayConfig {
     private String appid;

@@ -1,8 +1,8 @@
-package top.atstudy.component.sdk.payment.wx;
+package top.atstudy.component.sdk.payment.wxpay;
 
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
-import top.atstudy.component.sdk.payment.wx.mini.vo.UnifiedOrderReq;
+import top.atstudy.component.sdk.payment.wxpay.mini.vo.UnifiedOrderReq;
 import top.atstudy.component.util.XmlUtil;
 
 public class XmlTest {

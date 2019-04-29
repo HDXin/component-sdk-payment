@@ -1,4 +1,4 @@
-package top.atstudy.component.sdk.payment.wx.mini.vo;
+package top.atstudy.component.sdk.payment.wxpay.mini.vo;
 
 public class BasicPayResp {
     private String return_code;

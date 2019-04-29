@@ -1,10 +1,10 @@
-package top.atstudy.component.sdk.payment.wx;
+package top.atstudy.component.sdk.payment.wxpay;
 
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
-import top.atstudy.component.sdk.payment.wx.mini.config.PayConfig;
-import top.atstudy.component.sdk.payment.wx.mini.service.PaymentService;
-import top.atstudy.component.sdk.payment.wx.mini.vo.*;
+import top.atstudy.component.sdk.payment.wxpay.mini.config.PayConfig;
+import top.atstudy.component.sdk.payment.wxpay.mini.service.PaymentService;
+import top.atstudy.component.sdk.payment.wxpay.mini.vo.*;
 
 import java.lang.reflect.InvocationTargetException;
 

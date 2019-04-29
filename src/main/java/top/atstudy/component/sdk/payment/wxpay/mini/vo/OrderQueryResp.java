@@ -1,16 +1,16 @@
-package top.atstudy.component.sdk.payment.wx.mini.vo;
+package top.atstudy.component.sdk.payment.wxpay.mini.vo;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(
         name = "xml"
 )
-public class PayNotifyReq extends BasicPayResp {
+public class OrderQueryResp extends BasicPayResp {
     private String device_info;
-    private String signType;
     private String openid;
     private String is_subscribe;
     private String trade_type;
+    private String trade_state;
     private String bank_type;
     private Long total_fee;
     private Long settlement_total_fee;
@@ -26,6 +26,7 @@ public class PayNotifyReq extends BasicPayResp {
     private String out_trade_no;
     private String attach;
     private String time_end;
+    private String trade_state_desc;
 
     public String getDevice_info() {
         return this.device_info;
@@ -33,14 +34,6 @@ public class PayNotifyReq extends BasicPayResp {
 
     public void setDevice_info(String device_info) {
         this.device_info = device_info;
-    }
-
-    public String getSignType() {
-        return this.signType;
-    }
-
-    public void setSignType(String signType) {
-        this.signType = signType;
     }
 
     public String getOpenid() {
@@ -65,6 +58,14 @@ public class PayNotifyReq extends BasicPayResp {
 
     public void setTrade_type(String trade_type) {
         this.trade_type = trade_type;
+    }
+
+    public String getTrade_state() {
+        return this.trade_state;
+    }
+
+    public void setTrade_state(String trade_state) {
+        this.trade_state = trade_state;
     }
 
     public String getBank_type() {
@@ -185,5 +186,13 @@ public class PayNotifyReq extends BasicPayResp {
 
     public void setTime_end(String time_end) {
         this.time_end = time_end;
+    }
+
+    public String getTrade_state_desc() {
+        return this.trade_state_desc;
+    }
+
+    public void setTrade_state_desc(String trade_state_desc) {
+        this.trade_state_desc = trade_state_desc;
     }
 }

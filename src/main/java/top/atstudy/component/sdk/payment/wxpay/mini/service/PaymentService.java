@@ -1,8 +1,8 @@
-package top.atstudy.component.sdk.payment.wx.mini.service;
+package top.atstudy.component.sdk.payment.wxpay.mini.service;
 
 import org.apache.commons.beanutils.BeanUtils;
-import top.atstudy.component.sdk.payment.wx.mini.config.PayConfig;
-import top.atstudy.component.sdk.payment.wx.mini.vo.*;
+import top.atstudy.component.sdk.payment.wxpay.mini.config.PayConfig;
+import top.atstudy.component.sdk.payment.wxpay.mini.vo.*;
 import top.atstudy.component.util.RandomUtil;
 import top.atstudy.component.util.WxPaymentUtil;
 import top.atstudy.component.util.XmlUtil;
@@ -15,7 +15,6 @@ public class PaymentService extends BasicPaymentService {
 
     public static PaymentService getInstance(PayConfig payConfig) {
         if (instance == null) {
-            Class var1 = PaymentService.class;
             synchronized(PaymentService.class) {
                 if (instance == null) {
                     instance = new PaymentService();

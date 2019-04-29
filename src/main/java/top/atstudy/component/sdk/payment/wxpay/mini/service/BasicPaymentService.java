@@ -1,9 +1,9 @@
-package top.atstudy.component.sdk.payment.wx.mini.service;
+package top.atstudy.component.sdk.payment.wxpay.mini.service;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import top.atstudy.component.sdk.payment.wx.mini.config.PayConfig;
+import top.atstudy.component.sdk.payment.wxpay.mini.config.PayConfig;
 
 import java.lang.reflect.Field;
 import java.util.*;
