@@ -3,8 +3,8 @@ package top.atstudy.component.sdk.payment.wxpay.mini.service;
 import org.apache.commons.beanutils.BeanUtils;
 import top.atstudy.component.sdk.payment.wxpay.mini.config.PayConfig;
 import top.atstudy.component.sdk.payment.wxpay.mini.vo.*;
+import top.atstudy.component.util.HttpRequestUtil;
 import top.atstudy.component.util.RandomUtil;
-import top.atstudy.component.util.WxPaymentUtil;
 import top.atstudy.component.util.XmlUtil;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
@@ -39,7 +39,7 @@ public class PaymentService extends BasicPaymentService {
         String sign = this.getUnifiedorderSign(req);
         req.setSign(sign);
         String params = XmlUtil.convertToXml(req);
-        String result = WxPaymentUtil.post("https://api.mch.weixin.qq.com/pay/unifiedorder", params);
+        String result = HttpRequestUtil.post("https://api.mch.weixin.qq.com/pay/unifiedorder", params);
         this.logger.info(" ==>> unifiedorder result: {}", result);
         UnifiedOrderResp resp = (UnifiedOrderResp)XmlUtil.convertXmlStrToObject(UnifiedOrderResp.class, result);
         if ("SUCCESS".equals(resp.getResult_code()) && "SUCCESS".equals(resp.getReturn_code())) {
@@ -78,7 +78,7 @@ public class PaymentService extends BasicPaymentService {
         String sign = this.getUnifiedorderSign(req);
         req.setSign(sign);
         String params = XmlUtil.convertToXml(req);
-        String result = WxPaymentUtil.post("https://api.mch.weixin.qq.com/pay/orderquery", params);
+        String result = HttpRequestUtil.post("https://api.mch.weixin.qq.com/pay/orderquery", params);
         this.logger.info(" ==>> orderqueery result: {}", result);
         OrderQueryResp resp = (OrderQueryResp)XmlUtil.convertXmlStrToObject(OrderQueryResp.class, result);
         return resp;
@@ -97,7 +97,7 @@ public class PaymentService extends BasicPaymentService {
         String sign = this.getUnifiedorderSign(req);
         req.setSign(sign);
         String params = XmlUtil.convertToXml(req);
-        String result = WxPaymentUtil.post("https://api.mch.weixin.qq.com/secapi/pay/refund", params);
+        String result = HttpRequestUtil.post("https://api.mch.weixin.qq.com/secapi/pay/refund", params);
         this.logger.info(" ==>> refund result: {}", result);
         RefundResp resp = (RefundResp)XmlUtil.convertXmlStrToObject(RefundResp.class, result);
         return resp;
